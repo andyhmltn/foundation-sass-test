@@ -1,0 +1,69 @@
+@import "foundation/foundation";
+
+#logo {
+  text-align: center;
+  margin: 10px auto;
+
+  img {
+    max-width: 200px;
+  }
+}
+
+nav {
+  width: 100%;
+  max-width: 100%;
+  background: black;
+  color: #FFF;
+
+  margin-bottom: 10%;
+  list-style-type: none;
+
+  @include grid-row;
+
+  & li {
+    @include grid-column(2, false false);
+  }
+}
+
+#hero-unit {
+  @include grid-row;
+
+  background: url('http://placehold.it/960x300');
+  height: 300px;
+  margin-bottom: 15px !important;
+}
+
+#article-container {
+  @include grid-row;
+
+  & > article {
+    @include grid-column(8);
+  }
+
+  & > aside {
+    @include grid-column(4);
+
+    #images {
+      @include grid-row;
+
+      img {
+        @include grid-column(6);
+      }
+    }
+  }
+}
+
+footer {
+  @include grid-row;
+
+  padding: 50px;
+  
+  margin-top: 50px;
+  background: black;
+  color: #FFF;
+  text-align: center;
+  
+  section {
+    @include grid-column(3);
+  }
+}
